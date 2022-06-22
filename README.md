@@ -1,6 +1,6 @@
 # Web Playback SDK V3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using [Web Playback SDK Guide](https://developer.spotify.com/documentation/web-playback-sdk/guide) as a guild to build this.
 
 ## Available Scripts
 
@@ -39,7 +39,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### `yarn server`
+
+### `yarn dev`
+
 ## Learn More
+
+Using yarn instead of npm: [yarn add options doc](https://yarnpkg.com/cli/add/#options-D%2C-dev)
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
