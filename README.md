@@ -43,6 +43,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### `yarn dev`
 
+## To Run this project
+
+- you will need to create a .env file at the root directory
+
 ## Learn More
 
 Using yarn instead of npm: [yarn add options doc](https://yarnpkg.com/cli/add/#options-D%2C-dev)
