@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import Login from './Login';
 import './App.css';
+import WebPlaback from './WebPlayback';
 
 function App() {
+  const [token, setToken] = useState('');
+
+  useEffect(() =>{
+    async function getToken(){
+      const response = await fetch('/auth/token');
+      const json = await response.json();
+      console.log(json);
+      setToken(json.access_token);
+    }
+
+    getToken();
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Whitney</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {(token === '') ? <Login /> : <WebPlaback token={token} />}
+    </React.Fragment>
   );
 }
 
