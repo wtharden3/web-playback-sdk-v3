@@ -36,8 +36,6 @@ app.get('/auth/login', (req, res) => {
     console.log(`after auth_query_parameters: ${auth_query_parameters}`);
 
     res.redirect(`https://accounts.spotify.com/authorize/?${auth_query_parameters.toString()}`); // make sure this works using template literals instead of using quotes
-    console.log(`https://accounts.spotify.com/authorize/?${auth_query_parameters.toString()}`);
-    console.log('https://accounts.spotify.com/authorize/?' + auth_query_parameters.toString());
     console.log(`https://accounts.spotify.com/authorize/?${auth_query_parameters.toString()}` === 'https://accounts.spotify.com/authorize/?' + auth_query_parameters.toString());
 
     // res.redirect('https://accounts.spotify.com/authorize/?' + auth_query_parameters.toString());
